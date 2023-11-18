@@ -1,0 +1,408 @@
+/* ##### INSTAGROM ##### */
+
+/* Fuente */
+@font-face {
+	font-family: instagram;
+	src: url(./fonts/instafont.ttf);
+}
+
+/* Reset */
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/* ##### APP ##### */
+
+#root {
+	font-family: Arial, "Helvetica", sans-serif;
+	min-height: 100vh;
+	background-color: white;
+	display: grid;
+	grid-template-areas: "sidebar header footer" "sidebar main footer" "sidebar main footer";
+	grid-template-columns: 250px auto 250px;
+	grid-template-rows: 100px auto;
+	padding: 1rem;
+	gap: 1px;
+}
+
+header {
+	display: flex;
+	text-align: center;
+	padding-top: 2rem;
+	justify-content: center;
+	font-family: "instagram";
+	font-size: 25px;
+}
+
+.title {
+	font-family: "instagram";
+	font-size: 60px;
+}
+
+#main-menu {
+	grid-area: sidebar;
+	border-right: 1px solid grey;
+}
+#main-menu a {
+	display: grid;
+	grid-template-rows: 50px;
+	padding-left: 1.5rem;
+}
+
+#main-menu h2 {
+	padding: 2rem;
+	text-align: center;
+	font-family: "instagram";
+	font-size: 40px;
+}
+
+main {
+	display: flex;
+	text-align: center;
+	padding-top: 2rem;
+	justify-content: center;
+}
+
+ul {
+	width: 70%;
+	list-style-type: none;
+	align-items: center;
+	justify-content: end;
+}
+
+/* Formularios */
+
+.allForm {
+	margin: 0 auto;
+}
+
+.input {
+	height: 36px;
+	border: 1px solid #efefef;
+	border-radius: 3px;
+	background-color: #645d5d1e;
+	width: 70%;
+	font-size: 12px;
+	margin: 0;
+	padding: 9px 0px 7px 8px;
+	outline: none;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	box-sizing: border-box;
+}
+
+.pForm {
+	text-align: center;
+	padding: 10px 10px;
+	color: #645d5d;
+	font-size: 14px;
+}
+
+.blue {
+	color: rgba(20, 20, 144, 0.9);
+	padding-block: 0;
+	padding-bottom: 5px;
+}
+
+.spaceForm {
+	padding-bottom: 5px;
+}
+
+.formulario {
+	width: 400px;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	border: 1px solid #dbdbdb;
+	background-color: #fafafa;
+	padding: 10px 5px;
+	margin: 5px 0;
+}
+
+.buttonForm {
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	margin: 10px;
+	cursor: pointer;
+	padding: 0 15%;
+	width: 95%;
+	background: #3897f0;
+	border: 1px solid #3897f0;
+	color: #fff;
+	border-radius: 3px;
+	font-weight: 600;
+	font-size: 14px;
+	height: 28px;
+	line-height: 26px;
+	outline: none;
+}
+
+.publicate {
+	width: 70%;
+	margin: auto;
+}
+
+.logoutbtn {
+	padding: 0.5rem 1.5rem;
+	width: 100%;
+	height: auto;
+	line-height: normal;
+}
+
+.separation {
+	text-align: center;
+	color: #8e8e8e;
+	padding: 5px;
+	padding-bottom: 20px;
+	width: 100%;
+}
+
+.facebook {
+	cursor: pointer;
+	width: 100%;
+	padding: 0 8px;
+	background: #3897f0;
+	border: 1px solid #3897f0;
+	color: #fff;
+	border-radius: 3px;
+	font-weight: 600;
+	font-size: 14px;
+	height: 28px;
+	line-height: 26px;
+	outline: none;
+	white-space: nowrap;
+}
+
+/* Sidebar */
+
+.nav {
+	border: 0 1px 0 0 solid #e6e6e6;
+	border-radius: 1px;
+	margin-right: 0;
+	align-items: center;
+	text-decoration: none;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.outline {
+	text-decoration: none;
+	color: rgb(98, 96, 96);
+}
+
+.outline:hover {
+	color: black;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.text {
+	text-align: center;
+	margin: 15px;
+	color: #262626;
+	font-size: 14px;
+}
+
+.link {
+	text-align: center;
+	margin: 15px;
+	font-size: 14px;
+	color: #3897f0;
+	margin-left: 3px;
+	text-decoration: none;
+}
+
+/* Footer */
+
+footer {
+	text-align: center;
+	grid-area: footer;
+	padding-top: 2rem;
+}
+
+.footerApp {
+	width: 70%;
+	align-items: center;
+}
+
+.spaceFooter {
+	padding-bottom: 1.5rem;
+}
+
+footer .info {
+	grid-area: info;
+	color: #645d5d58;
+	font-size: 14px;
+}
+
+footer .insta-footer {
+	grid-area: insta-footer;
+	color: #645d5d58;
+	font-size: 10px;
+}
+
+/* Iconos e imagenes*/
+
+.icon {
+	height: 20px;
+	margin-top: 1rem;
+}
+
+.insta {
+	height: 40px;
+	margin-top: 0;
+}
+
+.footer-icons {
+	display: flex;
+	gap: 1rem;
+}
+.footer-icons-img .icon {
+	margin-right: 1rem;
+}
+
+.footer-icons-img {
+	width: 50%;
+	text-align: left;
+	margin-right: 1rem;
+}
+
+.icon-last {
+	width: 50%;
+	text-align: right;
+}
+
+.avatar-img {
+	width: 70px;
+	height: 70px;
+	border-radius: 50%;
+	border: 1px solid black;
+}
+
+.stories {
+	display: flex;
+	width: 70%;
+	list-style-type: none;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.storie-img {
+	display: flex;
+	text-align: center;
+	width: 70px;
+	height: 70px;
+	/* border-radius: 50%; */
+	border: double 8px white;
+	border-radius: 50px;
+	background-image: linear-gradient(white, white),
+		linear-gradient(
+			to right,
+			gold,
+			rgb(255, 102, 0),
+			rgb(255, 72, 0),
+			rgb(249, 56, 169),
+			rgb(176, 6, 176)
+		);
+	background-origin: border-box;
+	background-clip: content-box, border-box;
+}
+
+/* Post */
+
+.add-post {
+	border: 1px solid green;
+}
+
+.letter-post {
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.photo-post {
+	max-width: 400px;
+	/* height: 600px;
+	object-fit: contain; */
+}
+
+.likes-footer {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.post-all {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	padding: 2rem;
+	margin: 5px 0;
+	box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px,
+		rgba(17, 17, 26, 0.05) 0px 8px 32px;
+}
+
+.caption-post {
+	font-size: 18px;
+}
+
+/* Usuario */
+
+.user {
+	text-align: center;
+}
+
+.username {
+	display: flex;
+	text-align: center;
+	font-family: "instagram";
+	font-style: italic;
+}
+
+.username-footer {
+	font-family: "instagram";
+	font-style: italic;
+}
+
+.username-headerpost {
+	padding-bottom: 1rem;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.profile {
+	text-align: center;
+	font-family: "instagram";
+	font-size: 24px;
+	padding-bottom: 1rem;
+}
+
+.birthday {
+	font-size: 14px;
+}
+
+.postlist-perfil {
+	display: flex;
+	justify-content: center;
+}
+
+.postList {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 2rem;
+}
+
+/* SEARCH */
+
+#Buscador {
+	background: url(https://cdn0.iconfinder.com/data/icons/slim-square-icons-basics/100/basics-19-32.png)
+		no-repeat 0px 5px;
+	background-size: 24px;
+	width: 100%;
+	border: transparent;
+	border-bottom: solid 1px #ccc;
+	padding: 10px 10px 10px 30px;
+	outline: none;
+	margin: 10px;
+}
